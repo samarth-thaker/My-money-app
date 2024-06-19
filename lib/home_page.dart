@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-/* import 'loginPage.dart';
-import 'signUP.dart'; */
+
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -21,7 +20,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 203, 233, 226),
+      backgroundColor: const Color.fromARGB(255, 248, 249, 250),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -32,17 +31,18 @@ class _HomepageState extends State<Homepage> {
             ),
             TextButton(
               onPressed: login,
-              style:ButtonStyle(
+              style: ButtonStyle(
                 shape: WidgetStateProperty.all(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18),
-                    side: const BorderSide(color: Colors.white),
+                    side: const BorderSide(
+                        color: Color.fromARGB(255, 108, 117, 125)),
                   ),
                 ),
               ),
               child: const Text(
                 "Login",
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Color.fromARGB(225, 25, 25, 112)),
               ),
             ),
             const SizedBox(
@@ -54,13 +54,14 @@ class _HomepageState extends State<Homepage> {
                 shape: WidgetStateProperty.all(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18),
-                    side: const BorderSide(color: Colors.white),
+                    side: const BorderSide(
+                        color: Color.fromARGB(255, 108, 117, 125)),
                   ),
                 ),
               ),
               child: const Text(
                 'Sign Up',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Color.fromARGB(225, 25, 25, 112)),
               ),
             ),
           ],

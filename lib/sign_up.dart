@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 
-class SignUp extends StatefulWidget {
-  const SignUp({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<SignUp> createState() => _SignUpState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _SignUpState extends State<SignUp> {
+class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  void signupNow() {
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
+  /* void signupNow() {
     Navigator.pushNamed(context, '/dashboard');
-  }
+  } */
 
   @override
   Widget build(BuildContext context) {
@@ -62,14 +64,16 @@ class _SignUpState extends State<SignUp> {
               height: 30,
             ),
             ElevatedButton(
-              onPressed: signupNow,
+              onPressed: () {
+                Navigator.pushNamed(context, '/dashboard');
+              },
               style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
                   backgroundColor: Colors.blue,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18),
                   )),
-              child: const Text("Login"),
+              child: const Text("Sign Up"),
             ),
           ],
         ),

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mymoney/dashboard.dart';
 import 'package:mymoney/home_page.dart';
-import 'login_page.dart';
-import 'sign_up.dart';
+import 'package:mymoney/login_page.dart';
+import 'package:mymoney/sign_up.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -36,12 +37,12 @@ class MyApp extends StatelessWidget {
       ),
       home: const Homepage(),
       routes: {
-        '/login_page' : (context) =>const LoginScreen(),
-        '/home_page' : (context)=>const Homepage(),
-        'sign_up':(context)=>const SignUp(),
-        '/dashboard':(context)=>const DashboardScreen(),
+        '/login_page': (context) => const LoginScreen(),
+        '/home_page': (context) => const Homepage(),
+        'sign_up': (context) => const SignUpScreen(),
+        '/dashboard': (context) => const DashboardScreen(),
       },
+      
     );
   }
 }
-
